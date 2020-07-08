@@ -3,6 +3,7 @@ $(document).ready(function(){
     $("#search-btn").on("click", function(){
         var citySearch = $("#city-search").val();
         console.log("button pressed");
+        weatherSearch(citySearch);
     });
 
 
@@ -27,12 +28,15 @@ $(document).ready(function(){
 
     //ajax request to request forecast from api
     function weatherSearch (citySearch){
+        console.log("search");
         $.ajax({
             type: "GET",
-            url: "api.openweathermap.org/data/2.5/weather?q="
-            + citySearch + "&appid=dc644253a490b31ad20affc0c135f009",
+            url: "http://api.openweathermap.org/data/2.5/weather?q="
+            + citySearch + "&APPID=dc644253a490b31ad20affc0c135f009",
             dataType: "json",
             success: function(data) {
+                console.log(data);
+                window.datajson = data;
                 if(history.indexOf(citySearch) === -1) {
                     history.push(citySearch);
                     window.localStorage.setItem("history", JSON.stringify(history));
