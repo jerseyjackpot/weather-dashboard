@@ -1,27 +1,36 @@
 $(document).ready(function(){
+    // event listener for search button
     $("#search-btn").on("click", function(){
         var citySearch = $("#city-search").val();
+        console.log("button pressed");
     });
+
 
     $("#city-search").val(" ");
-    var citySearch = (function(){
+        var citySearch = (function(){
         weatherSearch(citySearch);
+        console.log("condition hit");
     });
 
+    //creating search history items
     $(".history").on("click", "li", function() {
         weatherSearch($(this).text());
+        console.log("history condition hit");
     });
 
+    //adding elements to hold the history and adding history to that element
     function makeList (text){
         var li = $("<li>").addClass("city-history").text(text);
         $(".history").append(li);
+        console.log("make list hit");
     }
 
+    //ajax request to request forecast from api
     function weatherSearch (citySearch){
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/weather?q="
-            + citySearch + "APPID=dc644253a490b31ad20affc0c135f009",
+            url: "api.openweathermap.org/data/2.5/weather?q="
+            + citySearch + "&appid=dc644253a490b31ad20affc0c135f009",
             dataType: "json",
             success: function(data) {
                 if(history.indexOf(citySearch) === -1) {
@@ -29,13 +38,17 @@ $(document).ready(function(){
                     window.localStorage.setItem("history", JSON.stringify(history));
                     makeList(citySearch);
                 }
+
                 $("#forecast").empty();
+                console.log(data);
 
                 //start here
                 //name, weather conditions, the temperature, the humidity, 
                 // the wind speed, and the UV index 
-                //functiontogetforecast(citySearch)
-                //functiontogetUVindex(data.object.object)
+                // function getForecast(citySearch){
+                //     function getUVindex(data.object.object)
+                // }
+                
             } 
         })
     }
