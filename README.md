@@ -2,6 +2,11 @@
 
 Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
+
+![Screen Shot 2020-07-12 at 10 49 19 PM](https://user-images.githubusercontent.com/64985702/87265939-fc467780-c491-11ea-9a09-08d00c59297a.png)
+
+URL:https://jerseyjackpot.github.io/weather-dashboard/
+
 ## Acceptance Criteria
 
 ```
@@ -19,6 +24,3 @@ THEN I am again presented with current and future conditions for that city
 WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 ```
-![Screen Shot 2020-07-12 at 10 49 19 PM](https://user-images.githubusercontent.com/64985702/87265939-fc467780-c491-11ea-9a09-08d00c59297a.png)
-
-URL:https://jerseyjackpot.github.io/weather-dashboard/
