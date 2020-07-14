@@ -34,10 +34,7 @@ function makeCityList(citySearchList) {
     })
       // Create weather variable
       .then(function(weather) {
-        // Log the queryURL
-        // console.log(queryURL);
-        // Log the resulting object
-        // console.log(weather);
+       
         var nowMoment = moment();
         var displayMoment = $("<h3>");
         $("#city-name").empty();
@@ -99,14 +96,12 @@ function makeCityList(citySearchList) {
             method: "GET"
             // Store all of the retrieved data inside of an object called "forecast"
           }).then(function(forecast) {
-            // console.log(queryURLB);
-            // console.log(forecast);
-            // Loop through the forecast list array and display a single forecast entry/time (5th entry of each day which is close to the highest temp/time of the day) from each of the 5 days
+            
             for (var i = 6; i < forecast.list.length; i += 8) {
               // 6, 14, 22, 30, 38
               var forecastDate = $("<h5>");
               var forecastPosition = (i + 2) / 8;
-              // console.log("#forecast-date" + forecastPosition);
+              
               $("#forecast-date" + forecastPosition).empty();
               $("#forecast-date" + forecastPosition).append(
                 forecastDate.text(nowMoment.add(1, "days").format("M/D/YYYY"))
