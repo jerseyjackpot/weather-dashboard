@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 <link rel="stylesheet" href="Assets/css/style.css">
-<title>Title</title>
+<title>Check the Forecast!</title>
 </head>
 <body>
     
@@ -34,12 +34,10 @@
                         </form>
                     </div>
                 </div>
-                <div>
-                    <ul id="city-list" class="list-group"></ul>
                 </div>
-                <button id="clear-button" type="clear" class="btn btn-primary">Clear</button>
+                <button id="clear-button" class="btn btn-primary">Clear</button>
             </div>
-            <div class="col col-md-9">
+            <div class="col col-md-10">
                 <div id="current-weather" class='card'>
                     <div class="card-body">
                         <div id="city-date-icon">
@@ -47,19 +45,18 @@
                             </span>
                             <span id='current-icon'></span>
                         </div>
-                        <p class="card-text" id="current-temp"></p>
-                        <p class="card-text" id="current-humidity"></p>
-                        <p class="card-text" id="current-wind"></p>
-                        <p class="card-text" id="current-uv"></p>
-                        </ul>
+                        <p class="card text-center" id="current-temp"></p>
+                        <p class="card text-center" id="current-humidity"></p>
+                        <p class="card text-center" id="current-wind"></p>
+                        <p class="card text-center" id="current-uv"></p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row text-center">
                     <div id="forecast-weather" class="col ol-md-9">
                         <h4>5-Day Forecast:</h4>
                         <div id="forecast-cards">
                             <div class="card forecast">
-                                <div id="forecast1" class="card-body">
+                                <div id="forecast1" class="card-text">
                                     <span class="card-title" id='forecast-date1'>
                                     </span>
                                     <span id='forecast-icon1'></span>
