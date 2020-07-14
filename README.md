@@ -3,7 +3,8 @@
 Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 
-![Screen Shot 2020-07-12 at 10 49 19 PM](https://user-images.githubusercontent.com/64985702/87265939-fc467780-c491-11ea-9a09-08d00c59297a.png)
+![Screen Shot 2020-07-13 at 10 37 25 PM](https://user-images.githubusercontent.com/64985702/87376252-932a3700-c559-11ea-9ff9-d85f346cbccc.png)
+
 
 URL:https://jerseyjackpot.github.io/weather-dashboard/
 
